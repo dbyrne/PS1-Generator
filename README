@@ -1,8 +1,8 @@
-PS1 Generator
+# PS1 Generator
 
-A simple webpage to generate a custom PS1 for your shell.
+A simple webpage to help generate a PS1 environment variable for your unix shell.
 
-Installation instructions:
+## Installation instructions:
 
 1) Install lein and cljsbuild plugin.
 2) Run "lein cljsbuild once".
