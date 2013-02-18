@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>PS1 Generator</title>
+    <!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <table>
+      <tr>
+	<td>
+	  <select id ="textType">
+	    <option value="" SELECTED>Arbitrary Text</option>
+	    <option value="\u">Username</option>
+	    <option value="\h">Hostname</option>
+	    <option value="\w">Working Directory</option>
+	    <option value="\@">12-hour AM/PM time</option>
+	    <option value="\t">hh:mm:ss time</option>
+	    <option value="\$?">Status of Last Command</option>
+
+	  </select>
+	</td>
+	<td><input type="text" value="" id="arbText"></td>
+      </tr>
+      <tr>
+	<td>Color:</td>
+	<td>
+	  <select id ="colorSelect">
+	    <option value="0">Black</option>
+	    <option value="1">Red</option>
+	    <option value="2">Green</option>
+	    <option value="3">Yellow</option>
+	    <option value="4">Blue</option>
+	    <option value="5">Purple</option>
+	    <option value="6">Cyan</option>
+	    <option value="7">LightGrey</option>
+	  </select>
+	</td>
+      </tr>
+    </table>
+
+    <input type="button" value="Insert" id="insertButton" />
+    <input type="button" value="Clear" id="clearButton" />
+    <br/>
+    <div id="render" style="font-size:25px;">
+    </div>
+    <br/>
+    <textarea id="output" rows="30" cols="80" style="font-size:20px; width:1000px; height:400px;">
+    </textarea>
+
+    <!-- pointing to cljsbuild generated js file -->
+    <script src="js/ps1.js"></script>
+  </body>
+</html>
